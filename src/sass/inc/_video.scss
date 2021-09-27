@@ -1,0 +1,66 @@
+.video{
+	padding-top: 218px;
+
+	.video-title{
+		font-size: 1.5625rem;
+		color: #000;
+		line-height: 160%;
+		margin-bottom: 26px;
+	}
+	.video-desc{
+		font-size: 1.125rem;
+		line-height: 178%;
+		color: rgba(0, 0, 0, 0.7);
+
+		p{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+a.open-video{
+	display: flex;
+	background-color: #252525;
+	background-image: url("../images/prepared/bg-video.svg"), linear-gradient(0deg, #252525, #252525); /* W3C */
+	border-radius: 25px;
+	box-shadow: 0px 20px 40px #CED2D5;
+	content: "";
+	width: 650px;
+	height: 365px;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transition: $transition;
+
+	.play{
+		width: 125px;
+		height: 125px;
+		background-color: $primary;
+		position: absolute;
+		border-radius: 125px;
+		bottom: 30px;
+		left: 30px;
+		display: flex;
+		padding-left: 48px;
+		padding-top: 38px;
+		transition: all .4s ease;
+
+		path{
+			fill: #fff;
+			transition: all .4s ease;
+		}
+	}
+
+	&:hover{
+		box-shadow: 0px 20px 40px #A6AAAC;
+
+		.play{
+			background: #FFFFFF;
+			box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
+
+			path{
+				fill: $primary;
+			}
+		}
+	}
+}

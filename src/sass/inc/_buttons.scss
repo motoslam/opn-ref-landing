@@ -1,0 +1,53 @@
+.btn{
+	display: inline-block;
+	border: none;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-family: Montserrat, sans-serif;
+	font-style: normal;
+	font-weight: $fontweight;
+	font-size: 1rem;
+	line-height: 206%;
+	text-align: center;
+	text-decoration: none;
+	padding: 7.75px 18.5px;
+	transition: $transition;
+	user-select: none;
+}
+
+.btn-primary{
+	background: $primary;
+	border: 1px solid $primary;
+	box-shadow: 0px 4px 20px rgba(255, 222, 183, 0.2);
+	color: #fff;
+	transition: all .1s ease;
+
+	&:hover{
+		box-shadow: 0px 4px 20px rgba(255, 222, 183, 0.5);
+		color: #fff;
+	}
+}
+
+.btn-default{
+	border: 1px solid $primary;
+	background: transparent;
+	color: $primary;
+	transition: all .1s ease;
+
+	&:hover{
+		background: $primary;
+		color: #fff;
+		box-shadow: 0px 4px 20px rgba(255, 222, 183, 0.5);
+	}
+}
+
+.btn-secondary{
+	background: rgba(220, 173, 118, 0.25);
+	color: #000;
+	padding: 7.75px 40px;
+
+	&:hover{
+		background: $primary;
+		color: #fff;
+	}
+}

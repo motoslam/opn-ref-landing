@@ -1,0 +1,46 @@
+.call_to_action{
+	padding-top: 200px;
+	.dots{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding-right: 50px;
+		.dot{
+			width: 260px;
+			font-size: 1.125rem;
+			line-height: 178%;
+			color: #000;
+			margin-bottom: 50px;
+
+			.image{
+				background: #252525;
+				box-shadow: 0px 20px 40px rgba(33, 33, 33, 0.35);
+				border-radius: 25px;
+				width: 85px;
+				height: 85px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 26px;
+			}
+		}
+	}
+	.call_action{
+		.title{
+			font-size: 3.5rem;
+			color: #000;
+			line-height: 134%;
+			margin-bottom: 27px;
+		}
+		.text{
+			font-size: 1.125rem;
+			line-height: 178%;
+			color: rgba(0, 0, 0, 0.7);
+			margin-bottom: 48px;
+		}
+		.btn{
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+}

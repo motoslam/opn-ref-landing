@@ -1,0 +1,79 @@
+
+$primary: #DCAD76;
+$fontsize: 16px;
+$textcolor: #333;
+$lineheight: 1.65;
+$userfont: Montserrat, sans-serif;
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+$transition: all .2s ease;
+$fontweight: 500;
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+	xxxl: 1510px
+);
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xxl: 1320px,
+	xxxl: 1510px
+);
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss';
+
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+	}
+}
+
+//@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $primary;
+	color: #fff;
+}
+
+input, textarea {
+	outline: none;
+
+	&:focus:required:invalid {
+		border-color: red
+	}
+
+	&:required:valid {
+		border-color: green
+	}
+}
+
+body {
+	font-family: $userfont;
+	font-size: $fontsize;
+	font-weight: $fontweight;
+	line-height: $lineheight;
+	color: $textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}

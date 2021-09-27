@@ -1,0 +1,145 @@
+footer{
+	background: #1C1C1C url("../images/prepared/footer-bg.svg") no-repeat center center;
+	background-size: cover;
+
+	.footer-row{
+
+		.data{
+			width: 100%;
+			max-width: 464px;
+			min-width: 370px;
+			box-sizing: border-box;
+			padding-right: 100px;
+
+			.title{
+				font-size: 3.5rem;
+				line-height: 134%;
+				color: $primary;
+				font-weight: $fontweight;
+				margin-bottom: 37px;
+			}
+
+			.text{
+				font-size: 1.125rem;
+				line-height: 178%;
+				color: rgba(255, 255, 255, 0.7);
+				margin-bottom: 43px;
+			}
+
+			a.phone{
+				font-size: 1.5625rem;
+				color: $primary;
+				text-decoration: none;
+				font-weight: $fontweight;
+			}
+
+			.address{
+				font-size: 1.125rem;
+				font-weight: $fontweight;
+				line-height: 178%;
+				color: $primary;
+				padding-top: 28px;
+				padding-bottom: 28px;
+			}
+
+			.email{
+				font-size: 1.125rem;
+				color: $primary;
+			}
+
+			.network{
+				padding-top: 36px;
+				padding-bottom: 40px;
+				a{
+					width: 61px;
+					height: 58px;
+					display: inline-block;
+					background-color: $primary;
+					border-radius: 15px;
+					background-position: center center;
+					background-repeat: no-repeat;
+					box-shadow: 0px 20px 40px rgba(193, 104, 0, 0.4);
+					margin-right: 36px;
+				}
+				a.tg{
+					background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAzMCAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI3LjgxIDAuMjk5Njg5TDEuMTY3NSAxMS4xODdDMS4xNjc1IDExLjE4NyAtMC4wOTIxMTggMTEuNjM2NiAwLjAwNTM4MTU3IDEyLjQ2NThDMC4xMDU1MDYgMTMuMjk2NCAxLjEzMzM4IDEzLjY3NjQgMS4xMzMzOCAxMy42NzY0TDcuODM3MjIgMTYuMDI2MkM3LjgzNzIyIDE2LjAyNjIgOS44NjA3MSAyMi45Mzc4IDEwLjI1OSAyNC4yNTNDMTAuNjU3MiAyNS41NjQ1IDEwLjk3NjcgMjUuNTk1NCAxMC45NzY3IDI1LjU5NTRDMTEuMzQ3NiAyNS43NjMzIDExLjY4NDcgMjUuNDk2IDExLjY4NDcgMjUuNDk2TDE2LjAxNTkgMjEuMzgzN0wyMi43NjYzIDI2Ljc3NDdDMjQuNTkyMSAyNy42MDQyIDI1LjI1NjYgMjUuODc2IDI1LjI1NjYgMjUuODc2TDMwIDAuOTU3NjQ0QzMwIC0wLjcwMjE1NCAyNy44MSAwLjI5OTY4OSAyNy44MSAwLjI5OTY4OVpNMjMuMDkzMyAyMy44NzE5TDE1Ljg3MTYgMTguMTA2MUwxMy42MzA2IDIwLjIzMzFMMTQuMTIzMyAxNS43MDc3TDIzLjc0OTUgNi43NUwxMC42MjggMTQuMzk4OEw0LjgwNzYxIDEyLjM1OUwyNy4wMTM5IDMuMjgzODZMMjMuMDkzMyAyMy44NzE5WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==");
+				}
+				a.ig{
+					background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMjkiIHZpZXdCb3g9IjAgMCAyOSAyOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0LjE2NjcgMEg0LjgzMzMzQzMuNTUxNDUgMCAyLjMyMjA4IDAuNTA5MjI1IDEuNDE1NjUgMS40MTU2NUMwLjUwOTIyNSAyLjMyMjA4IDAgMy41NTE0NSAwIDQuODMzMzNMMCAyNC4xNjY3QzAgMjUuNDQ4NSAwLjUwOTIyNSAyNi42Nzc5IDEuNDE1NjUgMjcuNTg0M0MyLjMyMjA4IDI4LjQ5MDggMy41NTE0NSAyOSA0LjgzMzMzIDI5SDI0LjE2NjdDMjUuNDQ4NSAyOSAyNi42Nzc5IDI4LjQ5MDggMjcuNTg0MyAyNy41ODQzQzI4LjQ5MDggMjYuNjc3OSAyOSAyNS40NDg1IDI5IDI0LjE2NjdWNC44MzMzM0MyOSAzLjU1MTQ1IDI4LjQ5MDggMi4zMjIwOCAyNy41ODQzIDEuNDE1NjVDMjYuNjc3OSAwLjUwOTIyNSAyNS40NDg1IDAgMjQuMTY2NyAwVjBaTTI2LjU4MzMgMjQuMTY2N0MyNi41ODMzIDI0LjgwNzYgMjYuMzI4NyAyNS40MjIzIDI1Ljg3NTUgMjUuODc1NUMyNS40MjIzIDI2LjMyODcgMjQuODA3NiAyNi41ODMzIDI0LjE2NjcgMjYuNTgzM0g0LjgzMzMzQzQuMTkyMzkgMjYuNTgzMyAzLjU3NzcgMjYuMzI4NyAzLjEyNDQ5IDI1Ljg3NTVDMi42NzEyOCAyNS40MjIzIDIuNDE2NjcgMjQuODA3NiAyLjQxNjY3IDI0LjE2NjdWNC44MzMzM0MyLjQxNjY3IDQuMTkyMzkgMi42NzEyOCAzLjU3NzcgMy4xMjQ0OSAzLjEyNDQ5QzMuNTc3NyAyLjY3MTI4IDQuMTkyMzkgMi40MTY2NyA0LjgzMzMzIDIuNDE2NjdIMjQuMTY2N0MyNC44MDc2IDIuNDE2NjcgMjUuNDIyMyAyLjY3MTI4IDI1Ljg3NTUgMy4xMjQ0OUMyNi4zMjg3IDMuNTc3NyAyNi41ODMzIDQuMTkyMzkgMjYuNTgzMyA0LjgzMzMzVjI0LjE2NjdaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTQuNSA3QzEzLjAxNjYgNyAxMS41NjY2IDcuNDM5ODcgMTAuMzMzMiA4LjI2Mzk4QzkuMDk5ODYgOS4wODgwOSA4LjEzODU2IDEwLjI1OTQgNy41NzA5MSAxMS42Mjk5QzcuMDAzMjUgMTMuMDAwMyA2Ljg1NDcyIDE0LjUwODMgNy4xNDQxMSAxNS45NjMyQzcuNDMzNSAxNy40MTggOC4xNDc4MSAxOC43NTQ0IDkuMTk2NyAxOS44MDMzQzEwLjI0NTYgMjAuODUyMiAxMS41ODIgMjEuNTY2NSAxMy4wMzY4IDIxLjg1NTlDMTQuNDkxNyAyMi4xNDUzIDE1Ljk5OTcgMjEuOTk2OCAxNy4zNzAxIDIxLjQyOTFDMTguNzQwNiAyMC44NjE0IDE5LjkxMTkgMTkuOTAwMSAyMC43MzYgMTguNjY2OEMyMS41NjAxIDE3LjQzMzQgMjIgMTUuOTgzNCAyMiAxNC41QzIyIDEyLjUxMDkgMjEuMjA5OCAxMC42MDMyIDE5LjgwMzMgOS4xOTY3QzE4LjM5NjggNy43OTAxOCAxNi40ODkxIDcgMTQuNSA3Wk0xNC41IDE5LjVDMTMuNTExMSAxOS41IDEyLjU0NDQgMTkuMjA2OCAxMS43MjIyIDE4LjY1NzNDMTAuODk5OSAxOC4xMDc5IDEwLjI1OSAxNy4zMjcgOS44ODA2IDE2LjQxMzRDOS41MDIxNyAxNS40OTk4IDkuNDAzMTUgMTQuNDk0NSA5LjU5NjA4IDEzLjUyNDVDOS43ODkgMTIuNTU0NiAxMC4yNjUyIDExLjY2MzcgMTAuOTY0NSAxMC45NjQ1QzExLjY2MzcgMTAuMjY1MiAxMi41NTQ2IDkuNzg5IDEzLjUyNDYgOS41OTYwN0MxNC40OTQ1IDkuNDAzMTUgMTUuNDk5OCA5LjUwMjE2IDE2LjQxMzQgOS44ODA2QzE3LjMyNzEgMTAuMjU5IDE4LjEwNzkgMTAuODk5OSAxOC42NTczIDExLjcyMjFDMTkuMjA2OCAxMi41NDQ0IDE5LjUgMTMuNTExMSAxOS41IDE0LjVDMTkuNSAxNS44MjYxIDE4Ljk3MzIgMTcuMDk3OSAxOC4wMzU1IDE4LjAzNTVDMTcuMDk3OSAxOC45NzMyIDE1LjgyNjEgMTkuNSAxNC41IDE5LjVaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjIgOUMyMy4xMDQ2IDkgMjQgOC4xMDQ1NyAyNCA3QzI0IDUuODk1NDMgMjMuMTA0NiA1IDIyIDVDMjAuODk1NCA1IDIwIDUuODk1NDMgMjAgN0MyMCA4LjEwNDU3IDIwLjg5NTQgOSAyMiA5WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==");
+				}
+			}
+		}
+
+		.map-box{
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+
+			@include media-breakpoint-down(xxl) {
+				justify-content: flex-start;
+			}
+
+			.map-container{
+				box-shadow: 0px 50px 50px #000000;
+				border-radius: 50px;
+				height: 540px;
+				width: 100%;
+				max-width: 900px;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.footer-vertical{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 1080px;
+		padding-top: 220px;
+
+		.contacts{
+			flex: 1 0 auto;
+		}
+
+		.footer-nav{
+			flex: 0 0 auto;
+			height: 150px;
+			display: flex;
+			align-items: center;
+
+			.logo{
+				width: 73px;
+				height: 35px;
+				display: block;
+				img{
+					max-width: 100%;
+				}
+			}
+
+			.links{
+				padding-left: 85px;
+				display: flex;
+				a {
+					display: block;
+					margin: 0 12px;
+					color: rgba(255, 255, 255, 0.35);
+					text-decoration: none;
+					font-size: 1rem;
+					font-weight: 600;
+
+					&:hover, &.active {
+						color: $primary;
+					}
+
+					@include media-breakpoint-down(xxxl) {
+						font-weight: 500;
+					}
+
+					@media (max-width: 1290px) {
+						font-size: .8rem
+					}
+				}
+			}
+		}
+	}
+}

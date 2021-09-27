@@ -1,0 +1,12 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="3" height="33" fill="#DCAD76"/>
+<rect x="33" width="3" height="18" fill="#DCAD76"/>
+<rect x="16" y="12" width="3" height="24" fill="#DCAD76"/>
+<rect x="16" width="3" height="8" fill="#DCAD76"/>
+<rect x="20" y="16" width="3" height="8" transform="rotate(90 20 16)" fill="#DCAD76"/>
+<rect x="8" y="16" width="3" height="8" transform="rotate(90 8 16)" fill="#DCAD76"/>
+<rect x="33" width="3" height="30" transform="rotate(90 33 0)" fill="#DCAD76"/>
+<rect x="36" y="16" width="3" height="20" transform="rotate(90 36 16)" fill="#DCAD76"/>
+<rect x="16" y="33" width="3" height="16" transform="rotate(90 16 33)" fill="#DCAD76"/>
+<path d="M30.8182 32.0743C34.0057 32.0743 36 30.72 36 28.0457C36 25.3543 34.0057 24 30.8182 24H25.6534V33.0343H24V34.4571H25.6534V36H28.4318V34.4571H32.1136V33.0343H28.4318V32.0743H30.8182ZM33.2045 28.0629C33.2045 29.2457 32.3352 29.8971 30.8011 29.8971H28.4318V26.2629H30.8011C32.3352 26.2629 33.2045 26.8971 33.2045 28.0629Z" fill="#DCAD76"/>
+</svg>

@@ -1,0 +1,63 @@
+.levels{
+	padding-top: 156px;
+	.level-title{
+		font-size: 3.5rem;
+		color: #000;
+		line-height: 134%;
+		margin-bottom: 36px;
+	}
+
+	.small-text{
+		font-size: 1.125rem;
+		color: rgba(0, 0, 0, 0.7);
+		line-height: 178%;
+		margin-bottom: 30px;
+	}
+
+	.normal-text{
+		font-size: 1.5625rem;
+		line-height: 140%;
+		color: #000;
+		margin-bottom: 40px;
+	}
+
+	.levels-block{
+		background: #FFFFFF;
+		box-shadow: 0px 20px 40px #D8DBDD;
+		border-radius: 25px;
+		display: flex;
+		.level-item{
+			width: 25%;
+			padding: 20px 24px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: stretch;
+			height: 98px;
+			border-right: 1px #EAEFF1 solid;
+			user-select: none;
+
+			&:last-child{
+				border: none;
+			}
+
+			&:hover{
+				.name{
+					color: $primary;
+				}
+			}
+
+			.name{
+				font-size: 1rem;
+				color: #ADADAD;
+			}
+			.rate{
+				font-size: 1.5625rem;
+				line-height: 160%;
+				color: #000;
+			}
+		}
+	}
+
+}
