@@ -1,17 +1,24 @@
 .header-line {
 	width: 100%;
 	z-index: 10;
-	position: fixed;
 	background: transparent;
-	height: 115px;
+	height: 93px;
+	transition: all .2s ease;
+
+	@include media-breakpoint-up(md) {
+		height: 115px;
+	}
 
 	.height100 {
-		height: 100%;
+		height: 93px;
+
+		@include media-breakpoint-up(md) {
+			height: 115px;
+		}
 	}
 
 	.logo {
 		display: block;
-		padding: 0 10px;
 		user-select: none;
 
 		img {
@@ -20,43 +27,52 @@
 	}
 
 	.header-navigation {
-		display: flex;
+		display: none;
 		flex: 1;
-		padding: 0 40px 0 50px;
+		padding-left: 3.5rem;
+
+		@include media-breakpoint-up(xl) {
+			display: flex;
+		}
 
 		a {
 			display: block;
-			margin: 0 12px;
 			color: rgba(255, 255, 255, 0.35);
 			text-decoration: none;
-			font-size: 1rem;
-			font-weight: $fontweight;
+			font-size: .875rem;
+			font-weight: 500;
+			margin-right: 1.875em;
+
+			@include media-breakpoint-up(xl) {
+				margin-right: 1.625em;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				font-size: 1rem;
+				font-weight: $fontweight;
+			}
 
 			&:hover, &.active {
 				color: $primary;
-			}
-
-			@include media-breakpoint-down(xxxl) {
-				font-weight: 500;
-				font-size: .8rem
 			}
 
 		}
 	}
 
 	.header-controls {
-		display: flex;
+		display: none;
+
+		@include media-breakpoint-up(xl) {
+			display: flex;
+		}
 
 		.btn {
-			margin: 0 10px;
+			margin: 0 0 0 10px;
+			font-weight: 600;
 
-			@include media-breakpoint-down(xxxl) {
+			@include media-breakpoint-down(xxl) {
+				font-size: .9375rem;
 				font-weight: 500;
-				font-size: 0.8rem;
-			}
-
-			@include media-breakpoint-up(xxl) {
-
 			}
 		}
 	}
@@ -65,6 +81,82 @@
 .header-line-bg-filter{
 	background: rgba(28, 28, 28, 0.87);
 	backdrop-filter: blur(10px);
+	transition-delay: 0.05s;
+}
+
+.mobile-nav{
+	overflow: hidden;
+	height: 0;
+	transition: $transition;
+	z-index: 8;
+	width: 100%;
+	background: #1C1C1C url("../images/prepared/mobile-bg.png") no-repeat center top;
+	position: fixed;
+	top: 0;
+	
+	.mobile-nav-flex{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.mobile-nav-links{
+		padding: 110px 0 0 0;
+		margin-bottom: 25px;
+
+		a {
+			display: block;
+			margin: 0 12px;
+			color: #fff;
+			text-decoration: none;
+			font-size: 1.2625rem;
+			font-weight: $fontweight;
+			line-height: 220%;
+
+			&:hover, &.active {
+				color: $primary;
+			}
+
+		}
+	}
+
+	.mobile-nav-footer{
+		padding: 0 12px;
+		font-size: 1.125rem;
+		font-weight: $fontweight;
+		a{
+			color: $primary;
+			font-size: 1.125rem;
+			font-weight: $fontweight;
+			display: block;
+		}
+		a.phone{
+			font-size: 1.5625rem;
+			margin-bottom: 25px;
+			text-decoration: none;
+		}
+		.address{
+			margin-bottom: 25px;
+			color: $primary;
+		}
+	}
+
+	.network{
+		display: flex;
+	}
+}
+
+body.is-opened{
+	height: 100vh;
+  	overflow-y: hidden;
+	.mobile-nav{
+		height: 100vh;
+		overflow-y: auto;
+	}
+	.header-line-bg-filter{
+		background: transparent;
+		backdrop-filter: none;
+	}
 }
 
 header {
@@ -74,81 +166,186 @@ header {
 	min-height: 1080px;
 	overflow: hidden;
 	position: relative;
-	padding-top: 115px;
+	margin-top: -115px;
+	padding: 115px 15px 15px 15px;
 
 	.header-box {
-		margin-top: 165px;
+		margin-top: 20px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 165px;
+		}
 	}
 
 	.header-about {
 		max-width: 450px;
 		margin-top: 20px;
+		padding-bottom: 30px;
+
+		@include media-breakpoint-down(xl) {
+			margin-top: 80px;
+		}
+
+		@include media-breakpoint-down(md) {
+			margin-top: 40px;
+		}
 
 		.title {
 			font-weight: 600;
-			font-size: 3.5rem;
+			font-size: 2.25rem;
 			line-height: 134%;
 			color: #DCAD76;
 			margin-bottom: 17px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 2.375rem;
+			}
+
+			@include media-breakpoint-up(lg) {
+				font-size: 2.625rem;
+			}
+
+			@include media-breakpoint-up(xl) {
+				font-size: 2.875rem;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				font-size: 3.5rem;
+			}
 		}
 
 		.text {
 			font-size: 1.125rem;
 			line-height: 178%;
-			font-weight: 600;
+			font-weight: 500;
 			color: rgba(255, 255, 255, 0.7);
 			margin-bottom: 40px;
 		}
 
 		.btn {
-			min-width: 300px;
+			min-width: 100%;
+
+			@include media-breakpoint-up(sm) {
+				min-width: 300px;
+			}
 		}
 	}
 
 	.header-family {
-		width: 584px;
-		height: 537px;
-		background: url("../images/prepared/family-big.jpeg") no-repeat center center;
+		width: 100%;
+		height: 346px;
+		background: url("../images/prepared/636636636.jpg") no-repeat center center;
 		background-size: cover;
 		filter: drop-shadow(0px 50px 50px #000000);
 		border-radius: 50px;
 		content: "";
+
+		@include media-breakpoint-up(xl) {
+			width: 380px;
+			height: 349px;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			width: 500px;
+			height: 460px;
+		}
+
+		@include media-breakpoint-up(xxxl) {
+			width: 584px;
+			height: 537px;
+		}
+
 	}
 
 	.header-records {
-		margin-top: 50px;
+		margin-top: 20px;
 		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
 
-		div {
-			width: 295px;
+		@include media-breakpoint-up(md) {
+			margin-top: 40px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			flex-direction: column;
+			align-items: flex-end;
+			margin-top: 80px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 20px;
+		}
+
+		@include media-breakpoint-up(xxxl) {
+			margin-top: 50px;
+			padding-left: 45px;
 		}
 
 		.title {
 			font-style: normal;
 			font-weight: 600;
-			font-size: 3.5rem;
+			font-size: 1.5625rem;
 			line-height: 134%;
 			color: $primary;
+			width: 100%;
+
+			@include media-breakpoint-up(md) {
+				font-size: 2.375rem;
+			}
+
+			@include media-breakpoint-up(lg) {
+				font-size: 2.625rem;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				font-size: 3.5rem;
+			}
+
 		}
 
 		.text {
 			font-size: 1.125rem;
 			line-height: 178%;
-			font-weight: 600;
+			font-weight: 500;
 			color: rgba(255, 255, 255, 0.7);
+
+			@include media-breakpoint-down(md) {
+				width: 100%;
+			}
 		}
 
 		.record {
-			padding-top: 25px;
+			padding: 35px 15px 0 0;
 			background: url("../images/prepared/record.svg") no-repeat left top;
-			margin-bottom: 85px;
+			width: 295px;
+			margin-bottom: 45px;
+
+			@include media-breakpoint-up(lg) {
+				padding-right: 0;
+			}
+
+			@include media-breakpoint-up(xxxl) {
+				margin-bottom: 85px;
+			}
+
 		}
 
 		.average {
-			padding-top: 25px;
-			background: url("../images/prepared/average.svg") no-repeat left top;
+			padding: 35px 0 0 15px;
+			background: url("../images/prepared/average.svg") no-repeat 15px top;
+			width: 295px;
+			margin-bottom: 45px;
+
+			@include media-breakpoint-up(lg) {
+				padding: 35px 0;
+				background-position: left top;;
+			}
+
+			@include media-breakpoint-up(xxxl) {
+				margin-bottom: 85px;
+			}
 		}
 	}
 }

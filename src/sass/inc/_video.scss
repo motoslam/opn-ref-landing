@@ -6,6 +6,11 @@
 		color: #000;
 		line-height: 160%;
 		margin-bottom: 26px;
+		margin-top: 70px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 0;
+		}
 	}
 	.video-desc{
 		font-size: 1.125rem;
@@ -25,12 +30,17 @@ a.open-video{
 	border-radius: 25px;
 	box-shadow: 0px 20px 40px #CED2D5;
 	content: "";
-	width: 650px;
-	height: 365px;
+	width: 100%;
+	max-width: 650px;
+	height: 225px;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	transition: $transition;
+
+	@include media-breakpoint-up(lg) {
+		height: 365px;
+	}
 
 	.play{
 		width: 125px;

@@ -21,6 +21,7 @@ $grid-breakpoints: (
 	xxl: 1400px,
 	xxxl: 1510px
 );
+
 $container-max-widths: (
 	sm: 540px,
 	md: 720px,
@@ -37,10 +38,21 @@ $container-max-widths: (
 
 @mixin font($fname, $fstyle, $fweight, $furl) {
 	@font-face {
-		font-family: $fname;
-		font-style: $fstyle;
-		font-weight: $fweight;
+		font: {
+			family: $fname;
+			style: $fstyle;
+			weight: $fweight
+		}
 		src: url($furl) format('woff2');
+	}
+}
+
+$imageDir: '../images/prepared/';
+@mixin background-image($image, $repeat: 'no-repeat', $position: 'center center') {
+	background: {
+		image: url(#{$imageDir}#{$image});
+		repeat: $repeat;
+		position: $position;
 	}
 }
 
@@ -68,9 +80,11 @@ input, textarea {
 }
 
 body {
-	font-family: $userfont;
-	font-size: $fontsize;
-	font-weight: $fontweight;
+	font: {
+		family: $userfont, $font-family-sans-serif;
+		size: $fontsize;
+		weight: $fontweight;
+	}
 	line-height: $lineheight;
 	color: $textcolor;
 	min-width: 320px;

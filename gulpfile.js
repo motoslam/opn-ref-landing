@@ -23,6 +23,9 @@ function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+        'node_modules/swiper/swiper-bundle.min.js',
+        'src/js/stack-slider.min.js',
         'src/js/app.js',
     ])
         .pipe(concat('app.min.js'))
@@ -40,8 +43,11 @@ function startwatch() {
 
 function styles() {
     return src([
-        "node_modules/ion-rangeslider/css/ion.rangeSlider.css",
-        'src/sass/main.scss'
+        'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+        'node_modules/swiper/swiper-bundle.min.css',
+        'src/sass/slider.scss',
+        'src/sass/main.scss',
     ])
         .pipe(eval(preprocessor)())
         .pipe(concat('app.min.css'))
