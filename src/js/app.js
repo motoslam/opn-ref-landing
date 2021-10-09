@@ -2,13 +2,52 @@ var sliderCards;
 
 var rangeSliderData = [
     {
-        from: 100000,
-        min: 50000,
-        max: 10000000,
+        from: 0,
+        min: 0,
+        max: 100000000,
+        step: 2000000,
+        percent: 0.0175,
         el: $('#rangeSliderLvl_1'),
         input: $('#rangeInputLvl_1')
+    }, {
+        from: 0,
+        min: 0,
+        max: 200000000,
+        step: 2000000,
+        percent: 0.00875,
+        el: $('#rangeSliderLvl_2'),
+        input: $('#rangeInputLvl_2')
+    }, {
+        from: 0,
+        min: 0,
+        max: 300000000,
+        step: 2000000,
+        percent: 0.004375,
+        el: $('#rangeSliderLvl_3'),
+        input: $('#rangeInputLvl_3')
+    }, {
+        from: 0,
+        min: 0,
+        max: 500000000,
+        step: 2000000,
+        percent: 0.0021875,
+        el: $('#rangeSliderLvl_4'),
+        input: $('#rangeInputLvl_4')
+    }, {
+        from: 0,
+        min: 0,
+        max: 800000000,
+        step: 2000000,
+        percent: 0.00109375,
+        el: $('#rangeSliderLvl_5'),
+        input: $('#rangeInputLvl_5')
     }
 ];
+
+var gpro = [0, 0, 0, 0, 0];
+
+var total_year = 0;
+var total_month = 0;
 
 $(document).ready(function () {
 
@@ -22,32 +61,23 @@ $(document).ready(function () {
             min: item.min,
             max: item.max,
             from: item.from,
-            step: 10000,
+            step: item.step,
             hide_min_max: true,
             hide_from_to: true,
             onChange: function (data) {
-                item.input.val(data.from);
+                let percent = item.percent;
+                gpro[i] = Math.floor(data.from * percent);
+                item.input.val(data.from / 1000000);
+                calculate();
+            },
+            onFinish: function(data) {
+                let percent = item.percent;
+                gpro[i] = Math.floor(data.from * percent);
+                item.input.val(data.from / 1000000);
+                calculate();
             }
         });
     });
-
-    /*$(".js-range-slider").ionRangeSlider({
-        skin: "round",
-        type: "single",
-        extra_classes: 'irs--opn',
-        min: $(this).closest('.js-calc-line').data('min'),
-        max: $(this).closest('.js-calc-line').data('max'),
-        from: $(this).closest('.js-calc-line').data('from'),
-        step: 10000,
-        hide_min_max: true,
-        hide_from_to: true,
-        onLoad: function(data) {
-            console.log(data);
-        },
-        onChange: function (data) {
-            $('#' + $(this).closest('.widget-line').data('input')).val('233');
-        }
-    });*/
 
     $('.mobile-nav').on('scroll', function (e) {
         var elem = $(e.currentTarget);
@@ -75,19 +105,17 @@ $(document).ready(function () {
         }
     });
 
-    /*if($(window).width() <= 768){
-        sliderCards = new Swiper(".slider-cards", {
+    if($(window).width <= 768){
+        var program_slider = new Swiper(".swiper-program", {
             slidesPerView: 1,
             spaceBetween: 30,
-            slideClass: 'slider-slide',
-            breakpoints: {
-                992: {
-                    slidesPerView: 2,
-                    spaceBetween: 0,
-                }
+            direction: 'horizontal',
+            pagination: {
+                el: ".swiper-pagination2",
             }
         });
-    }*/
+    }
+
 
 });
 
@@ -96,6 +124,18 @@ window.onresize = function () {};
 $(document).scroll(function () {
     fixHeaderLine();
 });
+
+function calculate() {
+    total_year = gpro.reduce(add, 0);
+    total_month = Math.floor(total_year / 12)
+    var opts = { minimumFractionDigits: 0 };
+    $('#total_year').html(total_year.toLocaleString("ru-RU", opts) + ' ₽');
+    $('#total_month').html(total_month.toLocaleString("ru-RU", opts) + ' ₽');
+}
+
+function add(accumulator, a) {
+    return accumulator + a;
+}
 
 function fixHeaderLine() {
     let scrollDistance = $(document).scrollTop();

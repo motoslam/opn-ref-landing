@@ -16,6 +16,40 @@
 
 <body>
 
+    <div class="md-modal md-effect-8" id="modal-8">
+        <div class="md-content">
+            <button class="md-close"></button>
+            <div class="md-icon-block">
+                <div class="icon"><img src="./images/prepared/icon-05.svg" alt=""></div>
+                <div class="for pro">для риелторов</div>
+            </div>
+            <h3>Инвестирование</h3>
+            <div>
+                <p>Флиппинг — это инвестиционно-торговая стратегия, подразумевающая покупку высоколиквидного 
+                    актива с целью его быстрой перепродажи. </p>
+                    <p>Мы используем эту стратегию в сфере недвижимости. Покупаем недооценённые по 
+                        различным причинам квартиры. За счёт ремонта улучшаем состояние и повышаем 
+                        привлекательность. Стоимость квартиры вырастает до 40%. В короткий срок 3 
+                        месяца продаём квартиру. Все потраченные средства на покупку и ремонт, возвращаются с прибылью. </p>
+                <div class="quote">
+                    Квартиры оформляются на инвестора. Это исключает риски. 
+                </div>
+                <p>
+                    Высокий годовой % и отсутствие рисков дают высокую привлекательность нашему продукту. 
+                </p>
+                <p>
+                    Инвесторов привлекают наши партнёры. С каждой полученной прибыли мы выплачивает проценты 
+                    согласно пятиуровневой партнерской программе. 
+                </p>
+                <p>Партнёром может стать каждый. Не важно сколько вам лет или в какой сфере вы развиваетесь. </p>
+                <p>Важно знать о нашей компании и рекомендовать ВСЕМ наши программы.</p>
+                <p><strong>Зарегистрируйтесь в нашей партнёрской программе, привлекайте инвесторов и получайте гарантированный доход</strong></p>
+                <a href="#" class="btn btn-primary">Зарегистрироваться</a>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div>
+
 <div class="website">
     <div class="mobile-nav">
         <div class="container">
@@ -193,74 +227,9 @@
                 в сфере недвижимости как для профессиональных риелторов, так и для всех желающих.
             </div>
 
-            <!--<div class="slider" id="stacked">
-                <div class="dp-wrap">
-                    <div id="dp-slider">
-                        <div class="dp_item" data-class="1" data-position="1">
-                            <div class="dp-content">
-                                <div class="dp-flex">
-                                    <div class="dp-icon">
-                                        <img src="images/prepared/program-01.jpeg" alt="">
-                                        <div class="icon-svg">
-                                            <img src="./images/prepared/icon-01.svg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="dp-data">
-                                        <h3>Выкуп квартир</h3>
-                                        <p>
-                                            Привлеките желающих зарабатывать на сдаче недвижимости
-                                            в аренду и получайте доход с каждой сделки
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="dp-btn">
-                                    <div>
-                                        <a href="#" class="btn btn-secondary">Подробности программы</a>
-                                    </div>
-                                    <div class="for all">
-                                        для всех
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dp_item" data-class="2" data-position="2">
-                            <div class="dp-content">
-                                <h2>Stack Slider 2</h2>
-                                <p> Easy setup. </p>
-                                <a href="http://dpes.com.np/?i=1" class="site-btn">Read More…</a>
-                            </div>
-                        </div>
-
-                        <div class="dp_item" data-class="3" data-position="3">
-                            <div class="dp-content">
-                                <h2>Stack Slider 4</h2>
-                                <p> Easy setup. </p>
-                                <a href="http://dpes.com.np/?i=1" class="site-btn">Read More…</a>
-                            </div>
-                        </div>
-
-                        <div class="dp_item" data-class="4" data-position="4">
-                            <div class="dp-content">
-                                <h2>4 - 2</h2>
-                                <p> Easy setup. </p>
-                                <a href="http://dpes.com.np/?i=1" class="site-btn">Read More…</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ul id="dp-dots">
-                        <li data-class="1" class="active"></li>
-                        <li data-class="2"></li>
-                        <li data-class="3"></li>
-                        <li data-class="4"></li>
-                    </ul>
-
-                </div>
-            </div>-->
-
-            <div class="desktop-view">
-                <div class="options-list">
-                    <div class="option-item">
+            <div class="desktop-view swiper-program">
+                <div class="options-list swiper-wrapper">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Выкуп квартир</h3>
@@ -278,14 +247,16 @@
                         </div>
                         <div class="option-flex">
                             <div>
-                                <a href="#" class="btn btn-secondary">Подробности программы</a>
+                                <a href="javascript:void(0);" data-modal="modal-8" class="md-trigger btn btn-secondary">
+                                    Открывает модалку
+                                </a>
                             </div>
                             <div class="for pro">
                                 для риелторов
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Продажа квартир под ремонт</h3>
@@ -295,9 +266,9 @@
                                 </p>
                             </div>
                             <div class="option-icon order-0 order-md-1 order-xl-0  order-xxl-1">
-                                <img src="images/prepared/program-01.jpeg" alt="">
+                                <img src="images/prepared/program-02.jpeg" alt="">
                                 <div class="icon-svg">
-                                    <img src="./images/prepared/icon-01.svg" alt="">
+                                    <img src="./images/prepared/icon-02.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -310,7 +281,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Покупка квартир под ремонт</h3>
@@ -320,9 +291,9 @@
                                 </p>
                             </div>
                             <div class="option-icon order-0 order-md-1 order-xl-0  order-xxl-1">
-                                <img src="images/prepared/program-01.jpeg" alt="">
+                                <img src="images/prepared/program-03.jpeg" alt="">
                                 <div class="icon-svg">
-                                    <img src="./images/prepared/icon-01.svg" alt="">
+                                    <img src="./images/prepared/icon-03.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -335,7 +306,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Коллега-риелтор</h3>
@@ -345,9 +316,9 @@
                                 </p>
                             </div>
                             <div class="option-icon order-0 order-md-1 order-xl-0  order-xxl-1">
-                                <img src="images/prepared/program-01.jpeg" alt="">
+                                <img src="images/prepared/program-04.jpeg" alt="">
                                 <div class="icon-svg">
-                                    <img src="./images/prepared/icon-01.svg" alt="">
+                                    <img src="./images/prepared/icon-04.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -360,7 +331,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Инвестирование</h3>
@@ -370,9 +341,9 @@
                                 </p>
                             </div>
                             <div class="option-icon order-0 order-md-1 order-xl-0  order-xxl-1">
-                                <img src="images/prepared/program-01.jpeg" alt="">
+                                <img src="images/prepared/program-05.jpeg" alt="">
                                 <div class="icon-svg">
-                                    <img src="./images/prepared/icon-01.svg" alt="">
+                                    <img src="./images/prepared/icon-05.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -385,7 +356,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Покупка квартиры </h3>
@@ -411,7 +382,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Продажа квартиры </h3>
@@ -437,7 +408,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Ремонт квартиры</h3>
@@ -462,7 +433,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Ипотека</h3>
@@ -488,7 +459,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="option-item">
+                    <div class="option-item swiper-slide">
                         <div class="option-flex">
                             <div class="option-content order-1 order-md-0 order-xl-1 order-xxl-0">
                                 <h3>Строительные материалы</h3>
@@ -515,6 +486,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="swiper-pagination2" style="text-align: center"></div>
             </div>
 
 
@@ -980,52 +952,48 @@
                                     <input type="text" class="js-range-slider" id="rangeSliderLvl_1" />
                                 </div>
                                 <div class="widget-input">
-                                    <input type="text" class="rangeInput" id="rangeInputLvl_1" />
+                                    <input type="text" class="rangeInput" id="rangeInputLvl_1" value="0" />
                                     <label for="rangeSliderLvl_1" class="rangeLabel">млн &#8381;</label>
                                 </div>
                             </div>
                             <div class="widget-line">
                                 <div class="widget-level">Уровень 2</div>
                                 <div class="widget-range">
-                                    <input type="text" class="" id="randeSliderLvl_2" data-min="50000"
-                                           data-from="10000000" data-max="100000000"/>
+                                    <input type="text" class="" id="rangeSliderLvl_2"/>
                                 </div>
                                 <div class="widget-input">
-                                    <input type="text" class="rangeInput"/>
-                                    <label for="randeSliderLvl_2" class="rangeLabel">млн &#8381;</label>
+                                    <input type="text" class="rangeInput" id="rangeInputLvl_2" value="0" />
+                                    <label for="rangeSliderLvl_2" class="rangeLabel">млн &#8381;</label>
                                 </div>
                             </div>
                             <div class="widget-line">
                                 <div class="widget-level">Уровень 3</div>
                                 <div class="widget-range">
-                                    <input type="text" class="" id="randeSliderLvl_3" data-min="50000"
-                                           data-from="70000" data-max="10000000"/>
+                                    <input type="text" class="" id="rangeSliderLvl_3"/>
                                 </div>
                                 <div class="widget-input">
-                                    <input type="text" class="rangeInput"/>
-                                    <label for="randeSliderLvl_3" class="rangeLabel">млн &#8381;</label>
+                                    <input type="text" class="rangeInput"  id="rangeInputLvl_3" value="0"/>
+                                    <label for="rangeSliderLvl_3" class="rangeLabel">млн &#8381;</label>
                                 </div>
                             </div>
                             <div class="widget-line">
                                 <div class="widget-level">Уровень 4</div>
                                 <div class="widget-range">
-                                    <input type="text" class="" id="randeSliderLvl_4" data-min="50000"
-                                           data-from="70000" data-max="10000000"/>
+                                    <input type="text" class="" id="rangeSliderLvl_4" value="0"/>
                                 </div>
                                 <div class="widget-input">
-                                    <input type="text" class="rangeInput"/>
-                                    <label for="randeSliderLvl_4" class="rangeLabel">млн &#8381;</label>
+                                    <input type="text" class="rangeInput" id="rangeInputLvl_4" value="0"/>
+                                    <label for="rangeSliderLvl_4" class="rangeLabel">млн &#8381;</label>
                                 </div>
                             </div>
                             <div class="widget-line">
                                 <div class="widget-level">Уровень 5</div>
                                 <div class="widget-range">
-                                    <input type="text" class="" id="randeSliderLvl_5" data-min="50000"
-                                           data-from="70000" data-max="10000000"/>
+                                    <input type="text" class="" id="rangeSliderLvl_5"/>
                                 </div>
                                 <div class="widget-input">
-                                    <input type="text" class="rangeInput"/>
-                                    <label for="randeSliderLvl_4" class="rangeLabel">млн &#8381;</label>
+                                    <input type="text" class="rangeInput" id="rangeInputLvl_5" value="0"/>
+                                    <label for="rangeSliderLvl_4" class="rangeLabel">млн &#8381;</label>
                                 </div>
                             </div>
                         </div>
@@ -1036,11 +1004,11 @@
                             </div>
                             <div class="widget-total">
                                 <div class="widget-total-year">
-                                    <span>3 023 000 ₽</span>
+                                    <span id="total_year">0 ₽</span>
                                     в год
                                 </div>
                                 <div class="widget-total-average">
-                                    <span>123 000 ₽</span>
+                                    <span id="total_month">0 ₽</span>
                                     в среднем в месяц
                                 </div>
                             </div>
@@ -1357,16 +1325,7 @@
     </div>
 </footer>
 <script src="js/app.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $("#stacked").stack_slider({
-            autoPlay: false,
-            dots: true,
-            arrows: true,
-            drag: true,
-        });
-    });
-</script>
+<script src="js/modal-effects.js"></script>
 </body>
 
 </html>

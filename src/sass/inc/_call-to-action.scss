@@ -1,5 +1,5 @@
 .call_to_action{
-	padding-top: 50px;
+	padding-top: 70px;
 	@include media-breakpoint-up(md) {
 		padding-top: 200px;
 	}
@@ -46,6 +46,7 @@
 		}
 	}
 	.call_action{
+		padding-top: 50px;
 		@include media-breakpoint-up(xl) {
 			padding-left: 50px;
 		}

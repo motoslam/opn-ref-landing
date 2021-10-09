@@ -10,7 +10,7 @@
 	}
 
 	.options-list{
-		display: block;
+		display: flex;
 		position: relative;
 		min-height: 600px;
 
@@ -25,8 +25,6 @@
 		}
 
 		.option-item{
-			width: 304px;
-			height: 557px;
 			background: #FFFFFF;
 			box-shadow: 0px 20px 40px #ECEFF0;
 			border-radius: 25px;
@@ -36,35 +34,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-
-			position: absolute;
-			left: 0;
-			top: 0;
-			z-index: 1;
-
-			&:nth-child(1){
-				z-index: 3;
-			}
-
-			&:nth-child(2){
-				left: 40px;
-				z-index: 2;
-				transform: scale(0.95);
-			}
-
-			&:nth-child(3){
-				left: 80px;
-				z-index: 1;
-				transform: scale(0.90);
-			}
-
-			&:nth-child(n+4){
-				left: 80px;
-				z-index: 1;
-				transform: scale(0.90);
-				opacity: 0;
-			}
-
+			margin-bottom: 30px;
 
 			@include media-breakpoint-up(md) {
 				position: relative;
@@ -102,9 +72,11 @@
 
 			.option-content{
 				padding-right: 22px;
-				height: 210px;
-				overflow: hidden;
 				position: relative;
+
+				@include media-breakpoint-up(md) {
+					height: auto;
+				}
 
 				&::after{
 					position: absolute;
@@ -115,6 +87,11 @@
 					width: 100%;
 					background: transparent;
 					background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,212,255,0) 100%);
+					display: none;
+
+					@include media-breakpoint-up(md) {
+						display: none;
+					}
 				}
 
 				@include media-breakpoint-up(md) {
@@ -211,84 +188,6 @@
 				}
 			}
 
-		}
-	}
-
-	.for{
-		width: 100%;
-		justify-content: center;
-		font-size: 1rem;
-		line-height: 200%;
-		color: #BEC4C7;
-		position: relative;
-		display: flex;
-		margin-top: 20px;
-		align-items: center;
-
-		&:before{
-			margin-right: 15px;
-		}
-
-		@include media-breakpoint-up(md) {
-			width: 150px;
-			justify-content: center;
-			flex-direction: column;
-			padding-left: 10px;
-			align-items: start;
-			margin-top: 0;
-		}
-
-		@include media-breakpoint-up(lg) {
-			margin-top: 0;
-		}
-
-		@include media-breakpoint-up(xl) {
-			flex-direction: row;
-			justify-content: flex-start;
-			align-items: center;
-			padding-left: 0;
-			margin-top: 20px;
-		}
-
-		@include media-breakpoint-up(xxl) {
-			flex-direction: column;
-			justify-content: center;
-			align-items: start;
-			margin-top: 0;
-		}
-	}
-
-	.all{
-		&:before{
-			background: $primary;
-			border-radius: 5px;
-			content: "ALL";
-			display: block;
-			width: 43px;
-			height: 20px;
-			font-size: 0.875rem;
-			color: #fff;
-			font-weight: 700;
-			line-height: 1.5;
-			text-align: center;
-			margin-bottom: 3px;
-		}
-	}
-
-	.pro{
-		&:before{
-			background: #252525;
-			border-radius: 5px;
-			content: "PRO";
-			display: block;
-			width: 43px;
-			height: 20px;
-			font-size: 0.875rem;
-			color: #fff;
-			font-weight: 700;
-			line-height: 1.5;
-			text-align: center;
-			margin-bottom: 3px;
 		}
 	}
 
@@ -706,4 +605,82 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+}
+
+.for{
+	width: 100%;
+	justify-content: center;
+	font-size: 1rem;
+	line-height: 200%;
+	color: #BEC4C7;
+	position: relative;
+	display: flex;
+	margin-top: 20px;
+	align-items: center;
+
+	&:before{
+		margin-right: 15px;
+	}
+
+	@include media-breakpoint-up(md) {
+		width: 150px;
+		justify-content: center;
+		flex-direction: column;
+		padding-left: 10px;
+		align-items: start;
+		margin-top: 0;
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-top: 0;
+	}
+
+	@include media-breakpoint-up(xl) {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		padding-left: 0;
+		margin-top: 20px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		margin-top: 0;
+	}
+}
+
+.all{
+	&:before{
+		background: $primary;
+		border-radius: 5px;
+		content: "ALL";
+		display: block;
+		width: 43px;
+		height: 20px;
+		font-size: 0.875rem;
+		color: #fff;
+		font-weight: 700;
+		line-height: 1.5;
+		text-align: center;
+		margin-bottom: 3px;
+	}
+}
+
+.pro{
+	&:before{
+		background: #252525;
+		border-radius: 5px;
+		content: "PRO";
+		display: block;
+		width: 43px;
+		height: 20px;
+		font-size: 0.875rem;
+		color: #fff;
+		font-weight: 700;
+		line-height: 1.5;
+		text-align: center;
+		margin-bottom: 3px;
+	}
 }
